@@ -680,3 +680,8 @@
 - Fichiers : .gitignore, suivi.md et ensemble des sources, ressources et tests du projet. Captures locales de vérification exclues ; environnement, base SQLite, dépendances et fichiers de stockage privés restent ignorés.
 - Configuration Git locale : origine dirigée vers le dépôt du club ; commit attribué au compte propriétaire via son adresse GitHub privée. Message : Création du site FC Hymont et de son administration.
 - Vérifications de référence : 63 tests, 951 assertions ; TypeScript, ESLint et compilation réussis à la fin des modifications fonctionnelles. Contrôle des fichiers à publier et envoi Git à effectuer après cette entrée. Aucun secret consigné.
+
+### Validation de l’envoi Git
+- Contrôle des 359 fichiers candidats : aucun jeton, clé privée, environnement réel ou fichier SQLite détecté ; git diff --cached --check réussi.
+- Commit d72c2da envoyé avec succès sur origin/main (antohtе/FCHYMONT). Ancienne adresse d’envoi du starter kit remplacée par celle du club, en HTTPS.
+- Branche locale de publication reliée à origin/main ; branche main locale préexistante préservée. Aucun envoi forcé.
