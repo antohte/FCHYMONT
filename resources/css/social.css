@@ -1,0 +1,132 @@
+/* Réseaux du club : deux accès aux profils, sans contenu externe chargé. */
+.social-page {
+    padding-block: 58px 96px;
+}
+.social-page__heading {
+    margin-bottom: 48px;
+}
+.social-page__heading h1 {
+    margin-bottom: 20px;
+    font-family: Impact, 'Arial Narrow', sans-serif;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.social-page__heading h1 span {
+    color: #e5092b;
+}
+.social-page__heading p {
+    color: #b5b6bd;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.social-page__networks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+.club-social-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #292b31;
+    background: #17181b;
+    transition: border-color 200ms;
+}
+.club-social-card:hover,
+.club-social-card:focus-within {
+    border-color: #e5092b;
+}
+.club-social-card__visual {
+    display: grid;
+    height: 250px;
+    place-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #292b31;
+    background: #111215;
+    color: #f7f7f8;
+}
+.club-social-card__visual svg {
+    width: 152px;
+    height: 152px;
+    transition: transform 250ms ease;
+}
+.club-social-card--instagram .club-social-card__visual {
+    background: radial-gradient(ellipse at 50% 120%, #5e1323, #111215 72%);
+}
+.club-social-card--facebook .club-social-card__visual {
+    background: radial-gradient(ellipse at 50% 120%, #1c304b, #111215 72%);
+}
+.club-social-card:hover .club-social-card__visual svg,
+.club-social-card:focus-within .club-social-card__visual svg {
+    transform: scale(1.06);
+}
+.club-social-card__content {
+    padding: 32px 36px 36px;
+}
+.club-social-card__content h2 {
+    font-family: Impact, 'Arial Narrow', sans-serif;
+    font-size: clamp(32px, 3vw, 42px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+.club-social-card__content p {
+    margin-top: 12px;
+    color: #b5b6bd;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+.club-social-card .club-social-card__action {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 28px;
+    height: 50px;
+    margin-top: 32px;
+    padding-inline: 22px;
+    border: 1px solid #e5092b;
+    border-radius: 0;
+    background: #e5092b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: none;
+}
+.club-social-card .club-social-card__action:hover {
+    background: #bb0824;
+    border-color: #bb0824;
+}
+@media (max-width: 700px) {
+    .social-page {
+        padding-block: 34px 56px;
+    }
+    .social-page__heading {
+        margin-bottom: 30px;
+    }
+    .social-page__networks {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .club-social-card__visual {
+        height: 190px;
+    }
+    .club-social-card__visual svg {
+        width: 120px;
+        height: 120px;
+    }
+    .club-social-card__content {
+        padding: 28px 24px;
+    }
+    .club-social-card .club-social-card__action {
+        width: 100%;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .club-social-card,
+    .club-social-card__visual svg {
+        transition: none;
+    }
+    .club-social-card:hover .club-social-card__visual svg,
+    .club-social-card:focus-within .club-social-card__visual svg {
+        transform: none;
+    }
+}

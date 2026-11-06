@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/vue-starter-kit",
+    "name": "fchymont/site",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Site du Football Club Hymont : effectif et convocations.",
     "keywords": [
         "laravel",
         "framework"
@@ -17,6 +17,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "laravel/boost": "^2.10",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.18",
         "laravel/sail": "^1.41",
@@ -25,6 +26,10 @@
         "phpunit/phpunit": "^11.5.3"
     },
     "autoload": {
+        "exclude-from-classmap": [
+            "/vendor/laravel/pint/app/",
+            "/vendor/league/flysystem/src/Local/"
+        ],
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
@@ -54,7 +59,7 @@
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names=server,queue,vite --kill-others"
         ]
     },
     "extra": {

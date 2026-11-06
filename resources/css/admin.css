@@ -1,0 +1,467 @@
+.club-admin-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.club-admin-nav__logout {
+    justify-self: end;
+}
+.club-admin-nav__back {
+    justify-self: start;
+}
+.admin-roster {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 40px 28px;
+    margin-top: 32px;
+}
+.admin-roster > li {
+    min-width: 0;
+}
+.admin-roster-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+.admin-roster-actions > span {
+    width: 100%;
+    color: #b5b6bd;
+    font-size: 12px;
+    text-align: center;
+}
+.admin-player-dialog.club-theme {
+    max-width: 900px;
+}
+.admin-player-editor {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+.admin-player-preview {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+.admin-composition {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 28px;
+    align-items: start;
+}
+.admin-composition-pitch {
+    min-width: 0;
+}
+.admin-composition-controls {
+    border-left: 1px solid #393b43;
+    padding-left: 24px;
+}
+.admin-composition-controls h2,
+.admin-settings h2 {
+    font:
+        400 30px/1.2 Impact,
+        'Arial Narrow',
+        sans-serif;
+    margin-bottom: 12px;
+}
+.admin-composition-controls h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.admin-composition-controls p,
+.admin-settings p,
+.admin-publication p {
+    color: #b5b6bd;
+    font-size: 13px;
+    line-height: 1.65;
+    max-width: 65ch;
+}
+.admin-fields {
+    display: grid;
+    gap: 18px;
+    margin-top: 24px;
+    min-width: 0;
+}
+.admin-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.admin-bench {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+.admin-bench > li {
+    width: 110px;
+}
+.admin-publication {
+    padding-block: 28px;
+    border-top: 1px solid #393b43;
+    margin-top: 32px;
+    display: grid;
+    gap: 16px;
+}
+.admin-settings {
+    padding-block: 28px;
+    border-top: 1px solid #393b43;
+    display: grid;
+    gap: 20px;
+}
+.admin-settings .calendar-form__grid {
+    max-width: 700px;
+}
+.admin-settings > button {
+    justify-self: start;
+}
+.club-admin-selection {
+    width: min(1760px, calc(100% - 64px));
+}
+@media (max-width: 1000px) {
+    .admin-composition {
+        grid-template-columns: 1fr;
+    }
+    .admin-composition-controls {
+        padding: 24px 0 0;
+        border-left: 0;
+        border-top: 1px solid #393b43;
+    }
+    .admin-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    .admin-player-editor {
+        grid-template-columns: 1fr;
+    }
+    .admin-player-preview {
+        width: 130px;
+        position: static;
+        margin: auto;
+    }
+    .admin-fields {
+        grid-template-columns: 1fr;
+    }
+    .club-admin-selection {
+        width: calc(100% - 32px);
+    }
+    .admin-roster {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 16px;
+    }
+    .admin-roster-actions button {
+        padding-inline: 10px;
+        font-size: 12px;
+    }
+}
+
+.club-auth {
+    width: min(440px, calc(100% - 40px));
+    margin: 72px auto 100px;
+}
+.club-auth > header {
+    margin-bottom: 32px;
+}
+.club-auth h1 {
+    font:
+        400 clamp(32px, 5vw, 44px) / 1.1 Impact,
+        'Arial Narrow',
+        sans-serif;
+    text-transform: uppercase;
+}
+.club-auth header p {
+    color: #b5b6bd;
+    line-height: 1.6;
+    margin-top: 14px;
+}
+.club-auth a {
+    color: #c9cbd0;
+}
+.club-auth input:focus-visible,
+.club-auth button:focus-visible {
+    outline: 2px solid #ff244c;
+    outline-offset: 3px;
+}
+
+.admin-sections {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+.admin-section {
+    padding: 28px;
+    border: 1px solid #292b31;
+    background: #17181b;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+.admin-section h2,
+.admin-content-summary h2 {
+    font:
+        400 28px/1.2 Impact,
+        'Arial Narrow',
+        sans-serif;
+}
+.admin-section p {
+    color: #b5b6bd;
+    line-height: 1.6;
+    flex: 1;
+}
+.admin-content-list {
+    display: grid;
+    gap: 16px;
+}
+.admin-content-row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 24px;
+    background: #17181b;
+    border: 1px solid #292b31;
+}
+.admin-content-summary {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.admin-content-summary p {
+    color: #b5b6bd;
+    margin-top: 10px;
+    max-width: 75ch;
+}
+.admin-content-thumb {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    background: white;
+}
+.admin-content-dialog.club-theme {
+    min-height: 0;
+    max-width: 720px;
+    max-height: 90svh;
+    overflow-y: auto;
+}
+.admin-content-form {
+    display: grid;
+    gap: 22px;
+}
+.admin-upload-preview {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    background: #fff;
+    margin-block: 12px;
+}
+.admin-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-block: 12px;
+}
+.admin-checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: #e5092b;
+}
+.admin-help {
+    color: #b5b6bd;
+    font-size: 12px;
+}
+@media (max-width: 950px) {
+    .admin-sections {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    .admin-sections {
+        grid-template-columns: 1fr;
+    }
+    .admin-content-row {
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 16px;
+    }
+    .admin-content-row .admin-actions {
+        width: 100%;
+    }
+    .admin-content-thumb {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.admin-selection-editor [data-player-id] .player-card {
+    touch-action: none;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.admin-selection-editor--dragging,
+.admin-selection-editor--dragging [data-player-id] .player-card {
+    cursor: grabbing;
+}
+.admin-selection-editor .selection-player--dragging {
+    opacity: 0.22;
+}
+.admin-card-tracking.club-theme {
+    position: fixed;
+    inset: 0 auto auto 0;
+    z-index: 100;
+    pointer-events: none;
+    min-height: 0;
+    background: none;
+    filter: drop-shadow(0 18px 18px #000a);
+    will-change: transform;
+}
+.admin-card-tracking > * {
+    width: 100%;
+}
+.selection-pitch__slots {
+    z-index: 0;
+    pointer-events: none;
+}
+.selection-pitch__slots > li {
+    aspect-ratio: 0.755;
+}
+.selection-pitch__slots .selection-slot {
+    pointer-events: auto;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px dashed #ffffff60;
+    background: #10151666;
+    color: #d0d3d5;
+    border-radius: 16% 16% 22% 22%;
+}
+.selection-slot > span:first-child {
+    font-size: 24px;
+    font-weight: 300;
+}
+.selection-slot__label {
+    font-size: 10px;
+}
+.selection-slot:disabled {
+    opacity: 0.7;
+}
+.selection-slot--target::after {
+    content: '';
+    position: absolute;
+    inset: -7px;
+    border: 2px solid #ff244c;
+    border-radius: 16%;
+    background: #e5092b18;
+    box-shadow: 0 0 22px #e5092b44;
+    pointer-events: none;
+}
+.admin-placement-help {
+    margin-top: 16px;
+}
+
+.admin-selection-editor .selection-pitch__players:not(.selection-pitch__slots) {
+    z-index: 1;
+    pointer-events: none;
+}
+.admin-selection-editor .selection-pitch__players:not(.selection-pitch__slots) > li {
+    pointer-events: auto;
+}
+
+.admin-sortable-handle {
+    touch-action: none;
+    cursor: grab;
+    flex-shrink: 0;
+}
+.admin-sortable-handle:active {
+    cursor: grabbing;
+}
+.admin-sortable-row--dragging {
+    opacity: 0.25;
+    outline: 1px dashed #e5092b;
+}
+.admin-sortable-tracking.club-theme {
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+    margin: 0;
+    min-height: 0;
+    background: #1b1c21;
+    box-shadow: 0 18px 42px #0009;
+    border-color: #e5092b;
+    transform: rotate(-0.6deg);
+}
+.admin-datepicker__trigger {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.admin-datepicker__calendar {
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #35363c;
+    background: #17181d;
+    width: min(100%, 340px);
+}
+.admin-datepicker__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.admin-datepicker__heading strong {
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.admin-datepicker__grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 3px;
+    margin-top: 8px;
+}
+.admin-datepicker__grid button {
+    padding: 0;
+    width: 100%;
+    height: 36px;
+}
+.admin-datepicker__weekday {
+    text-align: center;
+    color: #b5b6bd;
+    font-size: 12px;
+    padding: 6px 0;
+}
+.admin-editable-contacts {
+    display: grid;
+    gap: 16px;
+}
+.admin-editable-contacts__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+    gap: 12px;
+    align-items: end;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #35363c;
+}
+.admin-editable-contacts__row:has(input[type='url']) {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+}
+@media (max-width: 600px) {
+    .admin-editable-contacts__row,
+    .admin-editable-contacts__row:has(input[type='url']) {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+    .admin-editable-contacts__row > :not(button) {
+        grid-column: 1;
+    }
+    .admin-editable-contacts__row > button {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}

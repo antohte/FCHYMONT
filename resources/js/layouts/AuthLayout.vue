@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import AuthLayout from '@/layouts/auth/AuthSimpleLayout.vue';
-
-defineProps<{
-    title?: string;
-    description?: string;
-}>();
+import ClubLayout from '@/layouts/ClubLayout.vue';
+defineProps<{ title?: string; description?: string }>();
 </script>
-
 <template>
-    <AuthLayout :title="title" :description="description">
-        <slot />
-    </AuthLayout>
+    <ClubLayout active="auth" :title="title ?? 'Connexion'">
+        <section class="club-auth">
+            <header>
+                <h1>{{ title }}</h1>
+                <p>{{ description }}</p>
+            </header>
+            <slot />
+        </section>
+    </ClubLayout>
 </template>

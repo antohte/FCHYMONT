@@ -21,3 +21,8 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+# Captures locales de vérification
+/convocation-places-fixes.png
+/navigation-admin.png
+/statistiques-par-joueur.png

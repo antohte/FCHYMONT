@@ -17,6 +17,7 @@ export interface NavItem {
 }
 
 export interface SharedData {
+    [key: string]: unknown;
     name: string;
     quote: { message: string; author: string };
     auth: Auth;
@@ -30,6 +31,7 @@ export interface SharedData {
 }
 
 export interface User {
+    is_admin: boolean;
     id: number;
     name: string;
     email: string;

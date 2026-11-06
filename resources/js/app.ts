@@ -1,14 +1,23 @@
+import '../css/admin.css';
 import '../css/app.css';
+import '../css/calendar.css';
+import '../css/club.css';
+import '../css/contact.css';
+import '../css/news.css';
+import '../css/selection.css';
+import '../css/social.css';
+import '../css/sponsors.css';
+import '../css/team.css';
 
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import type { DefineComponent } from 'vue';
 import { createApp, h } from 'vue';
-import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import { ZiggyVue } from 'ziggy-js';
 import { initializeTheme } from './composables/useAppearance';
 
 // Extend ImportMeta interface for Vite...
-declare module 'vite/client' {
+declare global {
     interface ImportMetaEnv {
         readonly VITE_APP_NAME: string;
         [key: string]: string | boolean | undefined;
@@ -16,11 +25,10 @@ declare module 'vite/client' {
 
     interface ImportMeta {
         readonly env: ImportMetaEnv;
-        readonly glob: <T>(pattern: string) => Record<string, () => Promise<T>>;
     }
 }
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'FC Hymont';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -32,7 +40,7 @@ createInertiaApp({
             .mount(el);
     },
     progress: {
-        color: '#4B5563',
+        color: '#E5092B',
     },
 });
 
